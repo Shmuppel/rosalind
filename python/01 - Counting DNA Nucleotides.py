@@ -6,13 +6,13 @@ def nucleotide_counter(dna_string):
     nucleotides = dict()
     for nuc in dna_string:
         nucleotides[nuc] = nucleotides.get(nuc, 0) + 1
-
+        print(nucleotides)
     print("Count of nucleotides:")
     print(f"A: {nucleotides['A']}")
-    print(f"T: {nucleotides['C']}")
+    print(f"C: {nucleotides['C']}")
     print(f"G: {nucleotides['G']}")
-    print(f"C: {nucleotides['T']}")
+    print(f"T: {nucleotides['T']}")
 
 
 if __name__ == '__main__':
-    nucleotide_counter("ACGT")
+    nucleotide_counter("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC")
