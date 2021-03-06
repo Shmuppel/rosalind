@@ -3,10 +3,9 @@ def nucleotide_counter(dna_string):
     Prints a count of each DNA nucleotide in a given DNA string.
     :param dna_string: string to count nucleotides from.
     """
-    nucleotides = {'A': 0, 'C': 0, 'G': 0, 'T': 0}
-
-    for char in dna_string:
-        nucleotides[char] += 1
+    nucleotides = dict()
+    for nuc in dna_string:
+        nucleotides[nuc] = nucleotides.get(nuc, 0) + 1
 
     print("Count of nucleotides:")
     print(f"A: {nucleotides['A']}")
